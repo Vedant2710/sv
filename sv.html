@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>For Somu 💖</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        margin: 0;
+        font-family: "Roboto", sans-serif;
+        background: url("img/bg.webp") no-repeat center center fixed;
+        background-size: cover;
+        color: #fff;
+        overflow-x: hidden;
+      }
+
+      header {
+        text-align: center;
+        padding: 40px 20px 20px;
+        animation: fadeIn 2s ease-in-out;
+        background: rgba(0, 0, 0, 0.5);
+      }
+
+      h1 {
+        font-size: 2.5rem;
+        margin-bottom: 10px;
+      }
+
+      .tagline {
+        font-size: 1.2rem;
+        color: #ffb6c1;
+      }
+
+      .dialogue {
+        font-size: 1.4rem;
+        margin-top: 10px;
+        color: #ffc0cb;
+        font-style: italic;
+        animation: popIn 2s ease-in-out;
+      }
+
+      .qualities {
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+        flex-wrap: wrap;
+        margin: 40px 20px;
+      }
+
+      .card {
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 15px;
+        padding: 20px;
+        width: 250px;
+        text-align: center;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        transition: transform 0.4s, background 0.4s;
+        cursor: pointer;
+        position: relative;
+      }
+
+      .card:hover {
+        transform: translateY(-10px) scale(1.05);
+        background: rgba(255, 182, 193, 0.2);
+      }
+
+      .card img {
+        width: 100%;
+        border-radius: 10px;
+      }
+
+      .card h2 {
+        margin: 15px 0 10px;
+        font-size: 1.3rem;
+      }
+
+      .message {
+        position: absolute;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        background: rgba(0, 0, 0, 0.6);
+        color: #fff;
+        padding: 10px;
+        border-radius: 10px;
+        display: none;
+        font-size: 0.9rem;
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(-30px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      @keyframes popIn {
+        from {
+          opacity: 0;
+          transform: scale(0.8);
+        }
+        to {
+          opacity: 1;
+          transform: scale(1);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Sorry Somu 🩷</h1>
+      <p class="tagline">To the sweetest girl, with love from your Veds 💕</p>
+      <p class="dialogue">
+        You're my Nezuko... always slaying my heart 💘 ~ Love you, Somu 🌸
+      </p>
+    </header>
+
+    <section class="qualities">
+      <div class="card" onclick="showMessage(this)">
+        <img src="img/3.png" alt="Beautiful Hair" />
+        <h2>Beautiful Hair</h2>
+        <div class="message">
+          Your hair glows like Nezuko’s under the moonlight ✨
+        </div>
+      </div>
+      <div class="card" onclick="showMessage(this)">
+        <img src="img/2.png" alt="Cute Face" />
+        <h2>Cute Face</h2>
+        <div class="message">Your smile is cuter than Zenitsu’s dreams 💛</div>
+      </div>
+      <div class="card" onclick="showMessage(this)">
+        <img src="img/1.jpg" alt="Hot Figure💌🔥🔥" />
+        <h2>Mommy Figure</h2>
+        <div class="message">
+          You protect, you care, you love – just like a true Hashira 💗
+        </div>
+      </div>
+    </section>
+
+    <script>
+      function showMessage(card) {
+        const msg = card.querySelector(".message");
+        msg.style.display = msg.style.display === "block" ? "none" : "block";
+      }
+    </script>
+  </body>
+</html>
